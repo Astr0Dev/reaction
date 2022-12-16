@@ -1,0 +1,29 @@
+body {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #cdcdcd;
+}
+
+button {
+  width: 30%;
+  height: 30%;
+  min-width: 110px;
+  border: none;
+  cursor: pointer;
+  box-shadow: 0.3rem 0.3rem 1rem 0.01rem gray;
+  border-radius: 1rem;
+  font-family: "Courier New", Courier, monospace;
+  font-weight: bold;
+  background-color: white;
+}
+
+#timeDisplay {
+  padding: 0.2rem 2rem;
+  margin-bottom: 1rem;
+  box-shadow: 0.3rem 0.3rem 1rem 0.01rem gray;
+  border-radius: 1rem;
+  font-family: monospace;
+}
