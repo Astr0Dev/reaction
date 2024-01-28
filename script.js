@@ -9,6 +9,7 @@ let totalTime = 0;
 let numTries = 0;
 let gameStarted = false;
 let tries = 5;
+let welcome = "Welcome! Click START to play!"
 
 //event listener
 startButton.addEventListener("click", () => {
@@ -29,18 +30,14 @@ startButton.addEventListener("click", () => {
     } else {
       // Show "too early" message
       timeDisplay.innerHTML = "Clicked too early! Starting over...";
+      startButton.innerHTML = welcome
       numTries = 0;
     }
 
     // Reset game
     if (startButton.innerHTML === "Click now") {
       gameStarted = false;
-      startButton.innerHTML = "START";
-      if (numTries !== 0) {
-        startButton.innerHTML = "Try " + numTries;
-      } else {
-        startButton.innerHTML = "START";
-      }
+      startButton.innerHTML = "Try " + numTries;
       startButton.style.backgroundColor = "white";
     }
   } else {
