@@ -28,8 +28,8 @@ startButton.addEventListener("click", () => {
       }
     } else {
       // Show "too early" message
-      timeDisplay.innerHTML = "Too early, 500ms penalty!";
-      totalTime += 500;
+      timeDisplay.innerHTML = "Clicked too early! Starting over...";
+      numTries = 0;
     }
 
     // Reset game
