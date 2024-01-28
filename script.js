@@ -36,6 +36,11 @@ startButton.addEventListener("click", () => {
     if (startButton.innerHTML === "Click now") {
       gameStarted = false;
       startButton.innerHTML = "START";
+      if (numTries !== 0) {
+        startButton.innerHTML = "Try " + numTries;
+      } else {
+        startButton.innerHTML = "START";
+      }
       startButton.style.backgroundColor = "white";
     }
   } else {
