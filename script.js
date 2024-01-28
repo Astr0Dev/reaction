@@ -34,12 +34,14 @@ startButton.addEventListener("click", () => {
       timeDisplay.innerHTML = "Clicked too early! Starting over...";
       startButton.innerHTML = restartMsg;
       numTries = 0;
+      totalTime = 0;
+      gameStarted = false;
     }
 
     // Reset game
     if (startButton.innerHTML === "Click now") {
       gameStarted = false;
-      startButton.innerHTML = "Try " + numTries + 1;
+      startButton.innerHTML = "Try " + (parseInt(numTries) + 1);
       startButton.style.backgroundColor = "white";
     }
   } else {
