@@ -10,6 +10,7 @@ let numTries = 0;
 let gameStarted = false;
 let tries = 5;
 let welcome = "Welcome! Click START to play!"
+let restartMsg = "Click START to play!"
 
 //event listener
 startButton.addEventListener("click", () => {
@@ -26,11 +27,12 @@ startButton.addEventListener("click", () => {
         const averageTime = totalTime / numTries;
         timeDisplay.innerHTML = `Average time: ${averageTime.toFixed(2)}ms`;
         numTries = 0;
+        startButton.innerHTML = restartMsg;
       }
     } else {
       // Show "too early" message
       timeDisplay.innerHTML = "Clicked too early! Starting over...";
-      startButton.innerHTML = welcome
+      startButton.innerHTML = restartMsg;
       numTries = 0;
     }
 
