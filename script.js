@@ -29,14 +29,22 @@ startButton.addEventListener("click", () => {
         numTries = 0;
         startButton.innerHTML = restartMsg;
       }
-    } else {
-      // Show "too early" message
-      timeDisplay.innerHTML = "Clicked too early! Starting over...";
-      startButton.innerHTML = restartMsg;
-      numTries = 0;
-      totalTime = 0;
-      gameStarted = false;
-    }
+      else {
+        // Show "too early" message
+        timeDisplay.innerHTML = "Clicked too early! Starting over...";
+        numTries = 0;
+        totalTime = 0;
+        gameStarted = false;
+      
+        // Reset additional game-related elements if needed
+        // For example, you might want to reset the background color or other visual cues.
+        startButton.style.backgroundColor = "white";
+        
+        // Update button text after a delay
+        setTimeout(() => {
+          startButton.innerHTML = restartMsg;
+        }, 1000); // Adjust the delay as needed
+      }
 
     // Reset game
     if (startButton.innerHTML === "Click now") {
