@@ -24,6 +24,7 @@ startButton.addEventListener("click", () => {
       if (numTries === tries) {
         const averageTime = totalTime / numTries;
         timeDisplay.innerHTML = `Average time: ${averageTime.toFixed(2)}ms`;
+        numTries = 0;
       }
     } else {
       // Show "too early" message
