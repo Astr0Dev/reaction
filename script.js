@@ -37,7 +37,7 @@ startButton.addEventListener("click", () => {
     // Reset game
     if (startButton.innerHTML === "Click now") {
       gameStarted = false;
-      startButton.innerHTML = "Try " + numTries;
+      startButton.innerHTML = "Try " + numTries + 1;
       startButton.style.backgroundColor = "white";
     }
   } else {
